@@ -18,7 +18,7 @@ public class RadioTest {
     }
 
     @ParameterizedTest
-    @CsvSource({"0,1", "5,6", "8,9", "9,0"})
+    @CsvSource({"1,2", "5,6", "8,9", "9,0", "0,1"})
     void shouldTuneStationUpAndOver(int currentStation, int expected) {
         Radio tuneUp = new Radio();
         tuneUp.setCurrentStation(currentStation);
@@ -28,7 +28,7 @@ public class RadioTest {
     }
 
     @ParameterizedTest
-    @CsvSource({"9,8", "5,4", "1,0", "0,9"})
+    @CsvSource({"9,8", "5,4", "2,1", "1,0", "0,9"})
     void shouldTuneStationDownAndOver(int currentStation, int expected) {
         Radio tuneDown = new Radio();
         tuneDown.setCurrentStation(currentStation);
